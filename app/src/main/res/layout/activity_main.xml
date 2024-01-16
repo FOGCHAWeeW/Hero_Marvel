@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fon"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/helloText"
+        android:layout_width="605dp"
+        android:layout_height="89dp"
+        android:text="@string/hello"
+        android:textAlignment="center"
+        android:textColor="#4A2929"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.816"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.017" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="191dp"
+        android:layout_height="70dp"
+        android:backgroundTint="#851818"
+        android:onClick="start"
+        android:text="Спасти мир"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.953" />
+
+    <ImageButton
+        android:id="@+id/usa"
+        android:layout_width="149dp"
+        android:layout_height="169dp"
+        android:onClick="usa"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/usa" />
+
+    <ImageButton
+        android:id="@+id/jelezo"
+        android:layout_width="140dp"
+        android:layout_height="196dp"
+        android:onClick="jelezo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.644"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.525"
+        app:srcCompat="@drawable/jelezo" />
+
+    <ImageButton
+        android:id="@+id/tor"
+        android:layout_width="150dp"
+        android:layout_height="201dp"
+        android:onClick="tor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.538"
+        app:srcCompat="@drawable/tor" />
+
+    <TextView
+        android:id="@+id/power"
+        android:layout_width="136dp"
+        android:layout_height="26dp"
+        android:text="Cила:"
+        android:textAlignment="textStart"
+        android:textColor="#4A2929"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.026"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.345" />
+
+    <TextView
+        android:id="@+id/zahita"
+        android:layout_width="138dp"
+        android:layout_height="34dp"
+        android:text="Защита:"
+        android:textAlignment="textStart"
+        android:textColor="#4A2929"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.026"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
+
+    <TextView
+        android:id="@+id/weapone"
+        android:layout_width="171dp"
+        android:layout_height="32dp"
+        android:text="Оружие:"
+        android:textAlignment="textStart"
+        android:textColor="#4A2929"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.642" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
