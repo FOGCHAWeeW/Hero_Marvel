@@ -124,7 +124,7 @@
         app:srcCompat="@drawable/hp" />
 
     <TextView
-        android:id="@+id/magik"
+        android:id="@+id/magikTr"
         android:layout_width="153dp"
         android:layout_height="27dp"
         android:text="Магия:"

@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private int magikText;
     private String weaponeText;
     private int x;
+    private int kolvo=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,17 +65,27 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("powerText",910);
             intent.putExtra("zahitaText",710);
             intent.putExtra("magikText",2);
+            intent.putExtra("weaponeText","Щит");
+            intent.putExtra("kolvo",0);
+            startActivity(intent);
+
         }
         if (x == 2) {
             intent.putExtra("powerText",710);
             intent.putExtra("zahitaText",910);
             intent.putExtra("magikText",3);
+            intent.putExtra("weaponeText","Суперкостюм");
+            intent.putExtra("kolvo",0);
+            startActivity(intent);
         }
         if (x == 3) {
             intent.putExtra("powerText",830);
             intent.putExtra("zahitaText",830);
             intent.putExtra("magikText",7);
+            intent.putExtra("weaponeText","Мьёльнир");
+            intent.putExtra("kolvo",0);
+            startActivity(intent);
         }
-        startActivity(intent);
+
     }
 }
