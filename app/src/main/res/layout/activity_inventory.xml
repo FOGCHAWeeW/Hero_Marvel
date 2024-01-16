@@ -96,31 +96,31 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="30dp"
-        android:layout_height="303dp"
+        android:layout_width="18dp"
+        android:layout_height="248dp"
         android:text="ИНВЕНТАРЬ"
         android:textAlignment="center"
         android:textColor="#4A2929"
-        android:textSize="27sp"
+        android:textSize="20sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.053"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962" />
+        app:layout_constraintVertical_bias="0.776" />
 
     <ImageButton
         android:id="@+id/imageButton5"
-        android:layout_width="136dp"
-        android:layout_height="136dp"
-        android:backgroundTint="#EAE1C7"
+        android:layout_width="138dp"
+        android:layout_height="139dp"
+        android:backgroundTint="#EDE6D2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.181"
+        app:layout_constraintHorizontal_bias="0.18"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.021"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/hp" />
 
     <TextView

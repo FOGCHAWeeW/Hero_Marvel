@@ -10,6 +10,7 @@ import android.widget.TextView;
 import java.util.Objects;
 
 public class TransferActivity extends AppCompatActivity {
+    private TextView hpTr;
     private TextView powerTr;
     private TextView zahitaTr;
     private TextView weaponeTr;
@@ -17,6 +18,7 @@ public class TransferActivity extends AppCompatActivity {
     private TextView kol_voVragTr;
     private int kolvo;
     private int powerText;
+    private int hpText;
     private int zahitaText;
     private int magikText;
     private String weaponeText;
@@ -30,20 +32,21 @@ public class TransferActivity extends AppCompatActivity {
         zahitaTr = findViewById(R.id.zahitaTr);
         weaponeTr = findViewById(R.id.weaponeTr);
         magikTr = findViewById(R.id.magikTr);
+        hpTr = findViewById(R.id.hpTr);
         kol_voVragTr = findViewById(R.id.Kol_voVragTr);
-        kolvo = Integer.parseInt(Objects.requireNonNull(intent.getStringExtra("kolvo")));
+        kolvo = intent.getIntExtra("kolvo", 0);
         if (kolvo == 0){
-            powerText = Integer.parseInt(Objects.requireNonNull(intent.getStringExtra("powerText")));
-            zahitaText = Integer.parseInt(Objects.requireNonNull(intent.getStringExtra("zahitaText")));
-            magikText = Integer.parseInt(Objects.requireNonNull(intent.getStringExtra("magikText")));
+            powerText = intent.getIntExtra("powerText",0);
+            zahitaText =intent.getIntExtra("zahitaText",0);
+            magikText = intent.getIntExtra("magikText",0);
+            hpText = intent.getIntExtra("hpText",0);
             weaponeText = intent.getStringExtra("weaponeText");
             powerTr.setText("Сила:"+powerText+"/1000");
+            hpTr.setText("Здоровье:"+hpText);
             zahitaTr.setText("Защита:"+zahitaText+"/1000");
             weaponeTr.setText("Оружие:"+weaponeText);
             magikTr.setText("Магия:"+magikText+"/10");
-            kol_voVragTr.setText("Кол-во поверженных врагов:"+kolvo);
-
-
+            kol_voVragTr.setText("Кол-во поверженных врагов:"+kolvo+"/10");
         }
     }
 

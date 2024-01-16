@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, TransferActivity.class);
         if (x == 1) {
             intent.putExtra("powerText",910);
+            intent.putExtra("hpText",100);
             intent.putExtra("zahitaText",710);
             intent.putExtra("magikText",2);
             intent.putExtra("weaponeText","Щит");
@@ -72,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if (x == 2) {
             intent.putExtra("powerText",710);
+            intent.putExtra("hpText",100);
             intent.putExtra("zahitaText",910);
             intent.putExtra("magikText",3);
             intent.putExtra("weaponeText","Суперкостюм");
@@ -80,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if (x == 3) {
             intent.putExtra("powerText",830);
+            intent.putExtra("hpText",100);
             intent.putExtra("zahitaText",830);
             intent.putExtra("magikText",7);
             intent.putExtra("weaponeText","Мьёльнир");
