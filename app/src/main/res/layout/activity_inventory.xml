@@ -94,30 +94,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.299" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="18dp"
-        android:layout_height="248dp"
-        android:text="ИНВЕНТАРЬ"
-        android:textAlignment="center"
-        android:textColor="#4A2929"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.053"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.776" />
-
     <ImageButton
         android:id="@+id/imageButton5"
         android:layout_width="138dp"
-        android:layout_height="139dp"
+        android:layout_height="140dp"
         android:backgroundTint="#EDE6D2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintHorizontal_bias="0.182"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
@@ -138,5 +122,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.406" />
+
+    <ImageView
+        android:id="@+id/heroInventory"
+        android:layout_width="134dp"
+        android:layout_height="164dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.924"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/jelezo" />
+
+    <Button
+        android:id="@+id/beakOne"
+        android:layout_width="108dp"
+        android:layout_height="64dp"
+        android:backgroundTint="#851818"
+        android:onClick="beakOne"
+        android:text="Назад"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.448" />
+
+    <Button
+        android:id="@+id/beakFight"
+        android:layout_width="108dp"
+        android:layout_height="61dp"
+        android:backgroundTint="#851818"
+        android:onClick="beakFight"
+        android:text="Назад"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.628" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

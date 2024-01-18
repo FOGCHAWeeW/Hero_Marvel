@@ -21,7 +21,10 @@ public class TransferActivity extends AppCompatActivity {
     private int hpText;
     private int zahitaText;
     private int magikText;
+    private int x;
+    private int flag = 1;
     private String weaponeText;
+    private int randomNum = (int) (Math.random() * 9) + 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,7 @@ public class TransferActivity extends AppCompatActivity {
         hpTr = findViewById(R.id.hpTr);
         kol_voVragTr = findViewById(R.id.Kol_voVragTr);
         kolvo = intent.getIntExtra("kolvo", 0);
+        x = intent.getIntExtra("x", 0);
         if (kolvo == 0){
             powerText = intent.getIntExtra("powerText",0);
             zahitaText =intent.getIntExtra("zahitaText",0);
@@ -52,11 +56,15 @@ public class TransferActivity extends AppCompatActivity {
 
     public void go(View view) {
         Intent intent = new Intent(this, FightActivity.class);
+        intent.putExtra("x",x);
+        intent.putExtra("randomNum",randomNum);
         startActivity(intent);
     }
 
     public void inventory(View view) {
         Intent intent = new Intent(this, InventoryActivity.class);
+        intent.putExtra("x",x);
+        intent.putExtra("flag",flag);
         startActivity(intent);
     }
 }

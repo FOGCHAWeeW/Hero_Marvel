@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("magikText",2);
             intent.putExtra("weaponeText","Щит");
             intent.putExtra("kolvo",0);
+            intent.putExtra("x",1);
             startActivity(intent);
 
         }
@@ -78,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("magikText",3);
             intent.putExtra("weaponeText","Суперкостюм");
             intent.putExtra("kolvo",0);
+            intent.putExtra("x",2);
             startActivity(intent);
         }
         if (x == 3) {
@@ -87,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("magikText",7);
             intent.putExtra("weaponeText","Мьёльнир");
             intent.putExtra("kolvo",0);
+            intent.putExtra("x",3);
             startActivity(intent);
         }
 
