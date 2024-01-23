@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fon"
+    tools:context=".ChoiceActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.908"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.298"
+        app:srcCompat="@drawable/plweapon" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.209"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.298"
+        app:srcCompat="@drawable/plweapon" />
+
+    <Button
+        android:id="@+id/beak"
+        android:layout_width="102dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#851818"
+        android:onClick="beak"
+        android:text="В бой"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.418" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="92dp"
+        android:layout_height="30dp"
+        android:text="Оружие"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#4A2929"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.278"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="80dp"
+        android:layout_height="27dp"
+        android:text="Защита"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#4A2929"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.809"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <TextView
+        android:id="@+id/wInf"
+        android:layout_width="242dp"
+        android:layout_height="78dp"
+        android:text="Выбери оружие"
+        android:textAlignment="textStart"
+        android:textColor="#4A2929"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.208"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.921" />
+
+    <TextView
+        android:id="@+id/zInf"
+        android:layout_width="240dp"
+        android:layout_height="79dp"
+        android:text="Выбери защиту"
+        android:textAlignment="textStart"
+        android:textColor="#4A2929"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.906"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.921" />
+
+    <ImageButton
+        android:id="@+id/w1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:onClick="w1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.177"
+        app:srcCompat="@drawable/w1" />
+
+    <ImageButton
+        android:id="@+id/w2"
+        android:layout_width="112dp"
+        android:layout_height="115dp"
+        android:onClick="w2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.364"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.182"
+        app:srcCompat="@drawable/w2" />
+
+    <ImageButton
+        android:id="@+id/w3"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:onClick="w3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.587"
+        app:srcCompat="@drawable/w3" />
+
+    <ImageButton
+        android:id="@+id/w4"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:onClick="w4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.366"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.587"
+        app:srcCompat="@drawable/w4" />
+
+    <ImageButton
+        android:id="@+id/z1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:onClick="z1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.728"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.175"
+        app:srcCompat="@drawable/z1" />
+
+    <ImageButton
+        android:id="@+id/z2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:onClick="z2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.175"
+        app:srcCompat="@drawable/z2" />
+
+    <ImageButton
+        android:id="@+id/z3"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:onClick="z3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.729"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.587"
+        app:srcCompat="@drawable/z3" />
+
+    <ImageButton
+        android:id="@+id/z4"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:onClick="z4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.924"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.587"
+        app:srcCompat="@drawable/z4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

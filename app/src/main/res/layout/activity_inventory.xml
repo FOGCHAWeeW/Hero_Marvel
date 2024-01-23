@@ -9,11 +9,11 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="407dp"
-        android:layout_height="411dp"
+        android:layout_width="395dp"
+        android:layout_height="409dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.345"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.041" />
 
     <TextView
-        android:id="@+id/Kol_voVragIn"
+        android:id="@+id/kol_voVragIn"
         android:layout_width="184dp"
         android:layout_height="42dp"
         android:text="Кол-во поверженных врагов:"
@@ -50,7 +50,7 @@
         app:layout_constraintVertical_bias="0.536" />
 
     <TextView
-        android:id="@+id/protectionIn"
+        android:id="@+id/zahitaIn"
         android:layout_width="197dp"
         android:layout_height="23dp"
         android:text="Защита:"
@@ -96,19 +96,19 @@
 
     <ImageButton
         android:id="@+id/imageButton5"
-        android:layout_width="138dp"
-        android:layout_height="140dp"
+        android:layout_width="127dp"
+        android:layout_height="128dp"
         android:backgroundTint="#EDE6D2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.182"
+        app:layout_constraintHorizontal_bias="0.192"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.049"
         app:srcCompat="@drawable/hp" />
 
     <TextView
-        android:id="@+id/magikTr"
+        android:id="@+id/magikIn"
         android:layout_width="153dp"
         android:layout_height="27dp"
         android:text="Магия:"

@@ -5,9 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.TextView;
-
-import java.util.Objects;
 
 public class TransferActivity extends AppCompatActivity {
     private TextView hpTr;
@@ -30,34 +29,40 @@ public class TransferActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transfer);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         Intent intent = getIntent();
         powerTr = findViewById(R.id.powerTr);
         zahitaTr = findViewById(R.id.zahitaTr);
         weaponeTr = findViewById(R.id.weaponeTr);
-        magikTr = findViewById(R.id.magikTr);
+        magikTr = findViewById(R.id.magikIn);
         hpTr = findViewById(R.id.hpTr);
         kol_voVragTr = findViewById(R.id.Kol_voVragTr);
         kolvo = intent.getIntExtra("kolvo", 0);
         x = intent.getIntExtra("x", 0);
-        if (kolvo == 0){
-            powerText = intent.getIntExtra("powerText",0);
-            zahitaText =intent.getIntExtra("zahitaText",0);
-            magikText = intent.getIntExtra("magikText",0);
-            hpText = intent.getIntExtra("hpText",0);
-            weaponeText = intent.getStringExtra("weaponeText");
-            powerTr.setText("Сила:"+powerText+"/1000");
-            hpTr.setText("Здоровье:"+hpText);
-            zahitaTr.setText("Защита:"+zahitaText+"/1000");
-            weaponeTr.setText("Оружие:"+weaponeText);
-            magikTr.setText("Магия:"+magikText+"/10");
-            kol_voVragTr.setText("Кол-во поверженных врагов:"+kolvo+"/10");
-        }
+        powerText = intent.getIntExtra("powerText",0);
+        zahitaText =intent.getIntExtra("zahitaText",0);
+        magikText = intent.getIntExtra("magikText",0);
+        hpText = intent.getIntExtra("hpText",0);
+        weaponeText = intent.getStringExtra("weaponeText");
+        powerTr.setText("Сила:"+powerText);
+        hpTr.setText("Здоровье:"+hpText);
+        zahitaTr.setText("Защита:"+zahitaText);
+        weaponeTr.setText("Оружие:"+weaponeText);
+        magikTr.setText("Магия:"+magikText);
+        kol_voVragTr.setText("Кол-во поверженных врагов:"+kolvo+"/9");
+
     }
 
     public void go(View view) {
         Intent intent = new Intent(this, FightActivity.class);
         intent.putExtra("x",x);
         intent.putExtra("randomNum",randomNum);
+        intent.putExtra("powerText",powerText);
+        intent.putExtra("hpText",hpText);
+        intent.putExtra("zahitaText",zahitaText);
+        intent.putExtra("magikText",magikText);
+        intent.putExtra("weaponeText",weaponeText);
+        intent.putExtra("kolvo",kolvo);
         startActivity(intent);
     }
 
@@ -65,6 +70,12 @@ public class TransferActivity extends AppCompatActivity {
         Intent intent = new Intent(this, InventoryActivity.class);
         intent.putExtra("x",x);
         intent.putExtra("flag",flag);
+        intent.putExtra("powerText",powerText);
+        intent.putExtra("hpText",hpText);
+        intent.putExtra("zahitaText",zahitaText);
+        intent.putExtra("magikText",magikText);
+        intent.putExtra("weaponeText",weaponeText);
+        intent.putExtra("kolvo",kolvo);
         startActivity(intent);
     }
 }
