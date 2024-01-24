@@ -89,6 +89,10 @@ public class FightActivity extends AppCompatActivity {
                 //hpVrag=0;
                 infAtak.setText("!Ты нанёс врагу:"+powerText+"hp, а он тебе "+powerVrag+"hp,у тебя "+hpText+"hp, у врага 0hp!");
             }
+            if (hpText<=0){
+                    Intent intent2 = new Intent(this, LossActivity.class);
+                    startActivity(intent2);
+            }
         }
 
 
@@ -105,19 +109,19 @@ public class FightActivity extends AppCompatActivity {
             fonFight = getResources().getDrawable(R.drawable.l1);
             View rootView = getWindow().getDecorView().getRootView();
             rootView.setBackground(fonFight);
-            bFightImage.setImageResource(R.drawable.b1);
+            bFightImage.setImageResource(R.drawable.b8);
         }
         if (randomNum == 2) {
             fonFight = getResources().getDrawable(R.drawable.l2);
             View rootView = getWindow().getDecorView().getRootView();
             rootView.setBackground(fonFight);
-            bFightImage.setImageResource(R.drawable.b2);
+            bFightImage.setImageResource(R.drawable.b6);
         }
         if (randomNum == 3) {
             fonFight = getResources().getDrawable(R.drawable.l3);
             View rootView = getWindow().getDecorView().getRootView();
             rootView.setBackground(fonFight);
-            bFightImage.setImageResource(R.drawable.b3);
+            bFightImage.setImageResource(R.drawable.b2);
         }
         if (randomNum == 4) {
             fonFight = getResources().getDrawable(R.drawable.l4);
@@ -126,31 +130,31 @@ public class FightActivity extends AppCompatActivity {
             bFightImage.setImageResource(R.drawable.b4);
         }
         if (randomNum == 5) {
-            fonFight = getResources().getDrawable(R.drawable.l2);
+            fonFight = getResources().getDrawable(R.drawable.l5);
+            View rootView = getWindow().getDecorView().getRootView();
+            rootView.setBackground(fonFight);
+            bFightImage.setImageResource(R.drawable.b10);
+        }
+        if (randomNum == 6) {
+            fonFight = getResources().getDrawable(R.drawable.l6);
             View rootView = getWindow().getDecorView().getRootView();
             rootView.setBackground(fonFight);
             bFightImage.setImageResource(R.drawable.b5);
         }
-        if (randomNum == 6) {
-            fonFight = getResources().getDrawable(R.drawable.l2);
-            View rootView = getWindow().getDecorView().getRootView();
-            rootView.setBackground(fonFight);
-            bFightImage.setImageResource(R.drawable.b6);
-        }
         if (randomNum == 7) {
-            fonFight = getResources().getDrawable(R.drawable.l4);
+            fonFight = getResources().getDrawable(R.drawable.l7);
             View rootView = getWindow().getDecorView().getRootView();
             rootView.setBackground(fonFight);
             bFightImage.setImageResource(R.drawable.b7);
         }
         if (randomNum == 8) {
-            fonFight = getResources().getDrawable(R.drawable.l2);
+            fonFight = getResources().getDrawable(R.drawable.l8);
             View rootView = getWindow().getDecorView().getRootView();
             rootView.setBackground(fonFight);
-            bFightImage.setImageResource(R.drawable.b8);
+            bFightImage.setImageResource(R.drawable.b1);
         }
         if (randomNum == 9) {
-            fonFight = getResources().getDrawable(R.drawable.l2);
+            fonFight = getResources().getDrawable(R.drawable.l9);
             View rootView = getWindow().getDecorView().getRootView();
             rootView.setBackground(fonFight);
             bFightImage.setImageResource(R.drawable.b9);

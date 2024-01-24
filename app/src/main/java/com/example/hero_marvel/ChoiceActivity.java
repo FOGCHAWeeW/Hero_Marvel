@@ -68,30 +68,27 @@ public class ChoiceActivity extends AppCompatActivity {
             }
             if (choiceWeapone==1){
                 powerText = powerText+10;
-                hpText+=zahitaText;
+                //hpText+=zahitaText;
                 hpVrag+=zahitaVrag;
                 hpVrag-=(powerText+magikText);
                 hpText-=powerVrag;
             }
             if (choiceWeapone==2){
                 magikText = magikText+10;
-                hpText+=zahitaText;
+                //hpText+=zahitaText;
                 hpVrag+=zahitaVrag;
                 hpVrag-=(powerText+magikText);
                 hpText-=powerVrag;
             }
             if (choiceWeapone==3){
                 powerText = powerText+15;
-                magikText = magikText-10;
-                hpText+=zahitaText;
+                //hpText+=zahitaText;
                 hpVrag+=zahitaVrag;
                 hpVrag-=(powerText+magikText);
                 hpText-=powerVrag;
             }
             if (choiceWeapone==4){
-                powerText = powerText-20;
-                magikText = magikText+20;
-                hpText+=zahitaText;
+                powerText = powerText+20;
                 hpVrag+=zahitaVrag;
                 hpVrag-=(powerText+magikText);
                 hpText-=powerVrag;
@@ -162,6 +159,6 @@ public class ChoiceActivity extends AppCompatActivity {
         choiceZahita = 4;
         chInFight = 1;
 
-        zInf.setText(R.string.z3);
+        zInf.setText(R.string.z4);
     }
 }

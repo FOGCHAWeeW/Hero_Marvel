@@ -13,9 +13,13 @@
         android:theme="@style/Theme.Hero_Marvel"
         tools:targetApi="31">
         <activity
+            android:name=".LossActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".ChoiceActivity"
-            android:screenOrientation="landscape"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".FightActivity"
             android:exported="false"
