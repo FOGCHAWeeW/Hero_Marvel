@@ -41,8 +41,6 @@ public class FightActivity extends AppCompatActivity {
     private  int hpVrag;//переместить ..........................................
     private int powerVrag;//переместить ..........................................
     private int zahitaVrag;//переместить ..........................................
-
-    private int lvlFight=1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,7 +60,6 @@ public class FightActivity extends AppCompatActivity {
         randomNum = intent.getIntExtra("randomNum", 0);
         powerText = intent.getIntExtra("powerText",0);
         zahitaText = intent.getIntExtra("zahitaText",0);
-        lvlFight = intent.getIntExtra("lvlFight",0);
         magikText = intent.getIntExtra("magikText",0);
         hpText = intent.getIntExtra("hpText",0);
         kolvo = intent.getIntExtra("kolvo",0);
@@ -77,13 +74,6 @@ public class FightActivity extends AppCompatActivity {
             next.setVisibility(View.INVISIBLE);
         }
         if(chInFight == 1){
-            for (int i = 1; i < 100; i++) {
-                if (lvlFight == i){
-                    powerVrag+=10;
-                }else {
-                    break;
-                }
-            }
             if (hpVrag>0){
                 next.setVisibility(View.INVISIBLE);
                 choiceButton.setVisibility(View.VISIBLE);
@@ -97,7 +87,7 @@ public class FightActivity extends AppCompatActivity {
                 choiceButton.setVisibility(View.INVISIBLE);
                 inventoryFight.setVisibility(View.INVISIBLE);
                 //hpVrag=0;
-                infAtak.setText("!Ты нанёс врагу:"+powerText+"hp, а он тебе "+powerVrag+"hp,у тебя "+hpText+"hp, у врага "+hpVrag+"hp!");
+                infAtak.setText("!Ты нанёс врагу:"+powerText+"hp, а он тебе "+powerVrag+"hp,у тебя "+hpText+"hp, у врага 0hp!");
             }
         }
 
@@ -185,11 +175,9 @@ public class FightActivity extends AppCompatActivity {
 
     public void choice(View view) {
         chInFight = 0;
-        lvlFight++;
         Intent intent = new Intent(this, ChoiceActivity.class);
         intent.putExtra("x",x);
         intent.putExtra("chInFight",0);
-        intent.putExtra("lvlFight",lvlFight);
         intent.putExtra("randomNum",randomNum);
         intent.putExtra("powerText",powerText);
         intent.putExtra("hpText",hpText);
@@ -204,5 +192,20 @@ public class FightActivity extends AppCompatActivity {
     }
 
     public void next(View view) {
+        chInFight = 0;
+        Intent intent = new Intent(this, TransferActivity.class);
+        intent.putExtra("x",x);
+        intent.putExtra("chInFight",0);
+        intent.putExtra("randomNum",randomNum);
+        intent.putExtra("powerText",powerText);
+        intent.putExtra("hpText",hpText);
+        intent.putExtra("zahitaText",zahitaText);
+        intent.putExtra("magikText",magikText);
+        intent.putExtra("weaponeText",weaponeText);
+        intent.putExtra("kolvo",kolvo);
+        intent.putExtra("hpVrag",hpVrag);
+        intent.putExtra("powerVrag",powerVrag);
+        intent.putExtra("zahitaVrag",zahitaVrag);
+        startActivity(intent);
     }
 }

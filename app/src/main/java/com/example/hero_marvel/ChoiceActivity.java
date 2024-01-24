@@ -22,7 +22,6 @@ public class ChoiceActivity extends AppCompatActivity {
     private int x;
     private int chInFight;
     private int randomNum;
-    private int lvlFight;
     private  int hpVrag;
     private int powerVrag;
     private int zahitaVrag;
@@ -36,7 +35,6 @@ public class ChoiceActivity extends AppCompatActivity {
         Intent intent = getIntent();
         x = intent.getIntExtra("x", 0);
         chInFight = intent.getIntExtra("chInFight", 0);
-        lvlFight = intent.getIntExtra("lvlFight", 0);
         randomNum = intent.getIntExtra("randomNum", 0);
         powerText = intent.getIntExtra("powerText",0);
         zahitaText = intent.getIntExtra("zahitaText",0);
@@ -52,6 +50,7 @@ public class ChoiceActivity extends AppCompatActivity {
 
     public void beak(View view) {
         if (chInFight == 1) {
+
             if (choiceZahita==1){
                 zahitaText = zahitaText+10;
             }
@@ -97,11 +96,9 @@ public class ChoiceActivity extends AppCompatActivity {
                 hpVrag-=(powerText+magikText);
                 hpText-=powerVrag;
             }
-            lvlFight++;
             Intent intent = new Intent(this, FightActivity.class);
             intent.putExtra("x", x);
             intent.putExtra("chInFight",chInFight);
-            intent.putExtra("lvlFight",lvlFight);
             intent.putExtra("randomNum", randomNum);
             intent.putExtra("powerText", powerText);
             intent.putExtra("hpText", hpText);
