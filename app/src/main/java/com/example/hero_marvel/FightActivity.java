@@ -23,6 +23,15 @@ public class FightActivity extends AppCompatActivity {
     private Button choiceButton;
     private Button inventoryFight;
     private Button next;
+    private int Pzl1;
+    private int Pzl2;
+    private int Pzl3;
+    private int Pzl4;
+    private int Pzl5;
+    private int Pzl6;
+    private int Pzl7;
+    private int Pzl8;
+    private int Pzl9;
     private int x;
     private int randomNum;
     private Drawable fonFight;
@@ -37,10 +46,17 @@ public class FightActivity extends AppCompatActivity {
     private int magikText;
     private String weaponeText;
     private int chInFight;
+    private int proverkaInvent;
 
     private  int hpVrag;//переместить ..........................................
     private int powerVrag;//переместить ..........................................
     private int zahitaVrag;//переместить ..........................................
+    private TextView hpHeroText;
+    private TextView powerHeroText;
+    private TextView zahitaHeroText;
+    private TextView hpVragText;
+    private TextView powerVragText;
+    private TextView zahitaVragText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,42 +74,93 @@ public class FightActivity extends AppCompatActivity {
         Intent intent = getIntent();
         x = intent.getIntExtra("x", 0);
         randomNum = intent.getIntExtra("randomNum", 0);
+        proverkaInvent = intent.getIntExtra("proverkaInvent",0);
         powerText = intent.getIntExtra("powerText",0);
         zahitaText = intent.getIntExtra("zahitaText",0);
         magikText = intent.getIntExtra("magikText",0);
         hpText = intent.getIntExtra("hpText",0);
+        Pzl1 = intent.getIntExtra("Pzl1", 0);
+        Pzl2 = intent.getIntExtra("Pzl2", 0);
+        Pzl3 = intent.getIntExtra("Pzl3", 0);
+        Pzl4 = intent.getIntExtra("Pzl4", 0);
+        Pzl5 = intent.getIntExtra("Pzl5", 0);
+        Pzl6 = intent.getIntExtra("Pzl6", 0);
+        Pzl7 = intent.getIntExtra("Pzl7", 0);
+        Pzl8 = intent.getIntExtra("Pzl8", 0);
+        Pzl9 = intent.getIntExtra("Pzl9", 0);
         kolvo = intent.getIntExtra("kolvo",0);
+        hpHeroText = findViewById(R.id.hpHeroText);
+        powerHeroText = findViewById(R.id.powerHeroText);
+        zahitaHeroText = findViewById(R.id.zahitaHeroText);
+        hpVragText =findViewById(R.id.hpVragText);
+        powerVragText =findViewById(R.id.powerVragText);
+        zahitaVragText =findViewById(R.id.zahitaVragText);
         weaponeText = intent.getStringExtra("weaponeText");
         chInFight = intent.getIntExtra("chInFight", 0);
         hpVrag = intent.getIntExtra("hpVrag",0);
         powerVrag = intent.getIntExtra("powerVrag",0);
         zahitaVrag = intent.getIntExtra("zahitaVrag",0);
-
-
         if (chInFight !=1){
             next.setVisibility(View.INVISIBLE);
+            infAtak.setText("У тебя "+hpText+"hp, у врага "+hpVrag+"hp!");
         }
         if(chInFight == 1){
+            hpVrag-=(powerText+magikText);
+            hpText-=(powerVrag);
+            powerText-=zahitaVrag;
+            if (magikText<0){
+                magikText=0;
+            }
+            if (powerText<0){
+                powerText=0;
+            }
             if (hpVrag>0){
+                if (powerVrag<30){
+                    powerVrag+=10;
+                }
+                if (powerText<50){
+                    powerText+=30;
+                }
                 next.setVisibility(View.INVISIBLE);
                 choiceButton.setVisibility(View.VISIBLE);
                 inventoryFight.setVisibility(View.VISIBLE);
                 infFight.setText("Ты атаковал и враг тоже, атакуй ещё раз!");
-                infAtak.setText("!Ты нанёс врагу:"+powerText+"hp, а он тебе "+powerVrag+"hp,у тебя "+hpText+"hp, у врага "+hpVrag+"hp!");
+                infAtak.setText("!Ты нанёс врагу:"+((powerText+magikText)-zahitaVrag)+"hp, а он тебе "+powerVrag+"hp,у тебя "+hpText+"hp, у врага "+hpVrag+"hp!");
+                hpHeroText.setText("hp:"+hpText);
+                powerHeroText.setText("Урон:"+powerText);
+                zahitaHeroText.setText("Защита"+zahitaText);
+                hpVragText.setText("hp:"+hpVrag);
+                powerVragText.setText("Урон:"+powerVrag);
+                zahitaVragText.setText("Защита"+zahitaVrag);
             }
             if (hpVrag<=0){
                 next.setVisibility(View.VISIBLE);
-                infFight.setText("!!!ТЫ ПОБЕДИЛ ЭТОГО ЗЛОДЕЯ, ПОШЛИ ДАЛЬШЕ СПАСАТЬ МИР!!!");
+                kolvo++;
+                infFight.setText("!!!ТЫ ПОБЕДИЛ ЭТОГО ЗЛОДЕЯ, ПОШЛИ ДАЛЬШЕ СПАСАТЬ МИР!!!" +
+                        "!!!ТАКЖЕ ПРОВЕРЬ ИНВЕНТАРЬ!!!)))");
                 choiceButton.setVisibility(View.INVISIBLE);
                 inventoryFight.setVisibility(View.INVISIBLE);
-                //hpVrag=0;
-                infAtak.setText("!Ты нанёс врагу:"+powerText+"hp, а он тебе "+powerVrag+"hp,у тебя "+hpText+"hp, у врага 0hp!");
+                infAtak.setText("Кажется от в отключке");
+                hpHeroText.setText("hp:"+hpText);
+                powerHeroText.setText("Урон:"+powerText);
+                zahitaHeroText.setText("Защита"+zahitaText);
+                hpVragText.setText("hp:0");
+                powerVragText.setText("Урон:"+powerVrag);
+                zahitaVragText.setText("Защита"+zahitaVrag);
             }
             if (hpText<=0){
                     Intent intent2 = new Intent(this, LossActivity.class);
                     startActivity(intent2);
             }
+        }else {
+            hpHeroText.setText("hp:" + hpText);
+            powerHeroText.setText("Урон:" + powerText);
+            zahitaHeroText.setText("Защита" + zahitaText);
+            hpVragText.setText("hp:" + hpVrag);
+            powerVragText.setText("Урон:" + powerVrag);
+            zahitaVragText.setText("Защита" + zahitaVrag);
         }
+
 
 
         if (x == 1) {
@@ -162,6 +229,11 @@ public class FightActivity extends AppCompatActivity {
 
 
     }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        moveTaskToBack(true);
+    }
 
     public void inventory(View view) {
         Intent intent = new Intent(this, InventoryActivity.class);
@@ -169,11 +241,24 @@ public class FightActivity extends AppCompatActivity {
         intent.putExtra("x",x);
         intent.putExtra("randomNum",randomNum);
         intent.putExtra("powerText",powerText);
+        intent.putExtra("proverkaInvent",proverkaInvent);
         intent.putExtra("hpText",hpText);
         intent.putExtra("zahitaText",zahitaText);
         intent.putExtra("magikText",magikText);
         intent.putExtra("weaponeText",weaponeText);
         intent.putExtra("kolvo",kolvo);
+        intent.putExtra("hpVrag",hpVrag);
+        intent.putExtra("powerVrag",powerVrag);
+        intent.putExtra("zahitaVrag",zahitaVrag);
+        intent.putExtra("Pzl1",Pzl1);
+        intent.putExtra("Pzl2",Pzl2);
+        intent.putExtra("Pzl3",Pzl3);
+        intent.putExtra("Pzl4",Pzl4);
+        intent.putExtra("Pzl5",Pzl5);
+        intent.putExtra("Pzl6",Pzl6);
+        intent.putExtra("Pzl7",Pzl7);
+        intent.putExtra("Pzl8",Pzl8);
+        intent.putExtra("Pzl9",Pzl9);
         startActivity(intent);
     }
 
@@ -187,11 +272,21 @@ public class FightActivity extends AppCompatActivity {
         intent.putExtra("hpText",hpText);
         intent.putExtra("zahitaText",zahitaText);
         intent.putExtra("magikText",magikText);
+        intent.putExtra("proverkaInvent",proverkaInvent);
         intent.putExtra("weaponeText",weaponeText);
         intent.putExtra("kolvo",kolvo);
         intent.putExtra("hpVrag",hpVrag);
         intent.putExtra("powerVrag",powerVrag);
         intent.putExtra("zahitaVrag",zahitaVrag);
+        intent.putExtra("Pzl1",Pzl1);
+        intent.putExtra("Pzl2",Pzl2);
+        intent.putExtra("Pzl3",Pzl3);
+        intent.putExtra("Pzl4",Pzl4);
+        intent.putExtra("Pzl5",Pzl5);
+        intent.putExtra("Pzl6",Pzl6);
+        intent.putExtra("Pzl7",Pzl7);
+        intent.putExtra("Pzl8",Pzl8);
+        intent.putExtra("Pzl9",Pzl9);
         startActivity(intent);
     }
 
@@ -202,6 +297,7 @@ public class FightActivity extends AppCompatActivity {
         intent.putExtra("chInFight",0);
         intent.putExtra("randomNum",randomNum);
         intent.putExtra("powerText",powerText);
+        intent.putExtra("proverkaInvent",proverkaInvent);
         intent.putExtra("hpText",hpText);
         intent.putExtra("zahitaText",zahitaText);
         intent.putExtra("magikText",magikText);
@@ -210,6 +306,15 @@ public class FightActivity extends AppCompatActivity {
         intent.putExtra("hpVrag",hpVrag);
         intent.putExtra("powerVrag",powerVrag);
         intent.putExtra("zahitaVrag",zahitaVrag);
+        intent.putExtra("Pzl1",Pzl1);
+        intent.putExtra("Pzl2",Pzl2);
+        intent.putExtra("Pzl3",Pzl3);
+        intent.putExtra("Pzl4",Pzl4);
+        intent.putExtra("Pzl5",Pzl5);
+        intent.putExtra("Pzl6",Pzl6);
+        intent.putExtra("Pzl7",Pzl7);
+        intent.putExtra("Pzl8",Pzl8);
+        intent.putExtra("Pzl9",Pzl9);
         startActivity(intent);
     }
 }

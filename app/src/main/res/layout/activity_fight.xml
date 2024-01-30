@@ -6,6 +6,104 @@
     android:layout_height="match_parent"
     tools:context=".FightActivity">
 
+    <TextView
+        android:id="@+id/hpHeroText"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:background="#2C2727"
+        android:text="hp:"
+        android:textAlignment="textStart"
+        android:textColor="#00FF0A"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.464" />
+
+
+    <TextView
+        android:id="@+id/hpVragText"
+        android:layout_width="72dp"
+        android:layout_height="33dp"
+        android:background="#2C2727"
+        android:text="hp:"
+        android:textAlignment="textStart"
+        android:textColor="#00FF0A"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.694"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.357" />
+
+    <TextView
+        android:id="@+id/powerHeroText"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:background="#2C2727"
+        android:text="Урон:"
+        android:textAlignment="textStart"
+        android:textColor="#FF0000"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.464" />
+
+    <TextView
+        android:id="@+id/powerVragText"
+        android:layout_width="81dp"
+        android:layout_height="33dp"
+        android:background="#2C2727"
+        android:text="Урон:"
+        android:textAlignment="textStart"
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.357" />
+
+    <TextView
+        android:id="@+id/zahitaHeroText"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:background="#2C2727"
+        android:text="Защита:"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.464" />
+
+    <TextView
+        android:id="@+id/zahitaVragText"
+        android:layout_width="121dp"
+        android:layout_height="33dp"
+        android:background="#2C2727"
+        android:text="Защита:"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.357" />
+
     <Button
         android:id="@+id/choiceButton"
         android:layout_width="156dp"
@@ -26,7 +124,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.924"
@@ -38,7 +136,7 @@
         android:layout_height="228dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.967"
+        app:layout_constraintHorizontal_bias="0.938"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.912"
@@ -63,8 +161,8 @@
 
     <TextView
         android:id="@+id/infFight"
-        android:layout_width="329dp"
-        android:layout_height="42dp"
+        android:layout_width="331dp"
+        android:layout_height="60dp"
         android:background="#8E1313"
         android:text="Нажми на кнопку выбора атаки"
         android:textAlignment="center"
@@ -80,8 +178,8 @@
 
     <Button
         android:id="@+id/next"
-        android:layout_width="319dp"
-        android:layout_height="140dp"
+        android:layout_width="179dp"
+        android:layout_height="95dp"
         android:backgroundTint="#851818"
         android:onClick="next"
         android:text="ДАЛЬШЕ"
@@ -90,10 +188,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.371" />
+        app:layout_constraintVertical_bias="0.262" />
 
     <TextView
         android:id="@+id/infAtak"
